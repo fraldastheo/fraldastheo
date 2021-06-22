@@ -1,0 +1,55 @@
+<div  class="home-page">
+	<div class="comment-box mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec pretium dapibus maximus. Nam ac consectetur diam.
+        Sed id mauris non dolor eleifend fermentum.
+        Etiam rutrum lacus ut arcu lobortis venenatis
+        <div class="comment-sign">
+            Théo Guimarães Ferreira
+        </div>
+    </div>
+
+    <div class="pt-4"></div>
+
+    <div class="row pt-4">
+        <div class="col-12 col-md-6">
+            <button class="home-button mb-4">
+                <div class="row justify-content-center" (click)="openPhotos()">
+                    <div class="col-auto d-flex">
+                        <img src="/assets/img/embryo.png" alt="" [style]="{ 'width': '80px', 'height': 'auto' }"/>
+                    </div>
+                    <div class="col-auto text-left">
+                        Minhas<br/>
+                        <span>fotos</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="col-12 col-md-6">
+            <button class="home-button yellow mb-4" (click)="openGame()">
+                <div class="row justify-content-center">
+                    <div class="col-auto d-flex">
+                        <img src="/assets/img/pac.svg" alt="" [style]="{ 'width': '70px' }"/>
+                    </div>
+                    <div class="col-auto">
+                        Jogar game<br/>
+                        <span>do Théo</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="col-12">
+            <button class="home-button cyan mb-4" (click)="openDonation()">
+                <div class="row justify-content-center">
+                    <div class="col-auto d-flex">
+                        <img src="/assets/img/baby-boy.png" alt=""/>
+                    </div>
+                    <div class="col-auto">    
+                        Doar<br/>
+                        <span>fraldas</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

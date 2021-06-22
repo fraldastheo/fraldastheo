@@ -1,0 +1,63 @@
+@import 'src/scss/variables';
+
+.root-page {
+	background: linear-gradient(180deg, $primaryColor 13%, $secondaryColor 52%);
+	width: 100%;
+	height: 100%;
+
+	.site-title {
+		padding: 20px 0;
+
+		> img {
+			position: relative;
+			display: block;
+			margin: auto;
+		}
+	}
+
+    .root-content {
+        display: block;
+		margin: 40px auto;
+		max-width: 900px;
+		padding: 20px;
+	}
+	
+	.root-loading {
+		position: fixed;
+		display: flex;
+		align-content: center;
+		align-items: center;
+	}
+
+	&::before {
+		z-index: 0;
+		content: '';
+		position: absolute;
+		background: url('/assets/img/top_bg.png') no-repeat center top;
+		background-size: contain;
+		width: 100%;
+		max-width: 947px;
+		height: 148px;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes root-logo-beating {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(2px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

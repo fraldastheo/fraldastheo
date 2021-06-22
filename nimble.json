@@ -1,0 +1,18 @@
+{
+    "pre-render": {
+        "enabled": true,
+        "routes": [
+			"/",
+			"second",
+			"third"
+        ]
+    },
+    "vendors": {
+        "js": [
+        ],
+        "css": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/style.scss"
+        ]
+    }
+}

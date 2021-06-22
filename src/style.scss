@@ -1,0 +1,8 @@
+@import '~@nimble-ts/core/style.scss';
+@include nimble-core();
+
+@import 'scss/variables';
+@import 'scss/helper';
+@import 'scss/reset';
+@import 'scss/fonts';
+@import 'scss/customs/customs';
