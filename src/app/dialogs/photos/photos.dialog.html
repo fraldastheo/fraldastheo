@@ -1,4 +1,26 @@
 <div  class="photos-dialog">
-    <h3>Photos</h3>
-    photos-dialog works!
+	<div class="dialog-title text-center">
+		<h3 class="color-primary">Minha galeria de fotos</h3>
+		<button class="btn-close" (click)="dialogRef.close()"></button>
+	</div>
+
+	<div class="dialog-content">
+		<p class="f-w-300 mt-2 text-center">
+			Acompanhe meus momentos por aqui,<br/>até eu vir ao mundo!
+		</p>
+
+		<section @for="var gallery of galleries" class="gallery">
+			<h4>{{ gallery.title }}</h4>
+			<p @if="gallery.subtitle">{{ gallery.subtitle }}</p>
+			<div>
+				<div @for="var media of gallery.medias" class="gallery-item" [class]="media.type.toLowerCase()" (click)="showPhoto(media)">
+					<img @if="media.type === 'PHOTO'" [src]="'/assets/img/gallery/' + media.path" />
+					<video @if="media.type === 'VIDEO'">
+						<source [src]="'/assets/img/gallery/' + media.path" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</section>
+	</div>
+
 </div>

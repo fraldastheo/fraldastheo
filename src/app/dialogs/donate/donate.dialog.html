@@ -1,4 +1,24 @@
 <div  class="donate-dialog">
-    <h3>Donate</h3>
-    donate-dialog works!
+	<div class="dialog-title text-center">
+		<h3 class="color-primary">Me doe fraldas</h3>
+		<button class="btn-close" (click)="dialogRef.close()"></button>
+	</div>
+
+	<div class="dialog-content text-center">
+		<p class="f-w-300 mt-2">
+			Ajude-nos com o valor que achar justo<br/>ou quanto você puder 🙂
+		</p>
+
+		<h3 class="mt-4">
+			<span class="f-w-400">Qr Code</span> <span class="f-w-600">Pix</span>!
+		</h3>
+		<a class="d-table m-auto" href="https://nubank.com.br/pagar/5x2zu/bt8HgMXleO" target="_blank">
+			<img class="qr-code" src="/assets/img/qr-code-0.png"/>
+		</a>
+
+		<button class="btn-copy" (click)="copyQrCode()" [class]="{ 'copied': qrCodeCopied }">
+			<span>{{ qrCodeCopied ? 'Código Pix copiado' : 'Copiar código Pix'}}</span>
+		</button>
+	</div>
+
 </div>

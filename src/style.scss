@@ -2,6 +2,7 @@
 @include nimble-core();
 
 @import 'scss/variables';
+@import 'scss/mixins';
 @import 'scss/helper';
 @import 'scss/reset';
 @import 'scss/fonts';

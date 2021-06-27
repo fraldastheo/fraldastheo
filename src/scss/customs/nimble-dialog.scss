@@ -1,7 +1,51 @@
 .nimble-dialog {
     color: $dialogTextColor;
+
+	.dialog-title {
+		h3 {
+			display: inline;
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		.btn-close {
+			float: right;
+			background: none;
+			border: none;
+			padding: 12px;
+			border-radius: 50%;
+			margin: -20px -20px;
+			
+			&::before {
+				display: block;
+				content: '';
+				width: 16px;
+				height: 16px;
+				background-image: url('/assets/img/icons/ic-close.svg');
+				background-size: contain;
+			}
+		}
+	}
 }
 
 .nimble-dialog-area {
     background-color: $dialogBackgroundColor;
+	width: 100%;
+	max-width: 500px;
+}
+
+@include on-mobile() {
+	.nimble-dialog-container {
+		min-height: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	
+	.nimble-dialog-area {
+		display: block;
+		border-radius: 0;
+		height: auto;
+		min-height: 100%;
+		max-width: unset;
+	}
 }

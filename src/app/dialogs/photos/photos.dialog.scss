@@ -1,2 +1,102 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+
 .photos-dialog {
+
+	.dialog-content {
+		padding-bottom: 20px;
+	}
+
+	p {
+		line-height: 1.1;
+	}
+
+	.gallery {
+		padding-top: 40px;
+
+		> h4 {
+			font-size: 18px;
+			font-weight: 400;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 16px;
+				height: 13px;
+				background: url('/assets/img/icons/ic-gallery.svg') no-repeat;
+				background-size: contain;
+				margin-right: 5px;
+				vertical-align: middle;
+			}
+		}
+
+		> p {
+			font-size: 13px;
+			font-weight: 400;
+			margin-bottom: 5px;
+			margin-left: 22px;
+			color: lighten($dialogTextColor, 20)
+		}
+
+		> div {
+			width: calc(100% + 20px);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+
+			.gallery-item {
+				position: relative;
+				width: 140px;
+				height: 140px;
+				overflow: hidden;
+				margin: 10px 10px 0 10px;
+				background-color: rgba(0, 0, 0, .01);
+				border: 3px solid rgba(0, 0, 0, .05);
+				cursor: pointer;
+				border-radius: 10px;
+				transition-duration: 200ms;
+
+				> img,
+				> video {
+					position: absolute;
+					width: auto;
+					height: 100%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&.video {
+					&::before {
+						content: '';
+						position: absolute;
+						top: calc(50% - 25px);
+						left: calc(50% - 25px);
+						width: 50px;
+						height: 50px;
+						border-radius: 50%;
+						background-color: rgba(#FFF, .75);
+						z-index: 1;
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: calc(50% + 10px);
+						transform: translate(-50%, -50%);
+						border-left: solid 18px #555;
+						border-right: solid 14px transparent;
+						border-top: solid 14px transparent;
+						border-bottom: solid 14px transparent;
+						z-index: 2;
+					}
+				}
+
+				&:hover {
+					border-color: $primaryColor;
+				}
+			}
+		}
+	}
 }

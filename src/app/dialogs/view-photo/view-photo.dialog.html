@@ -1,0 +1,15 @@
+<div  class="view-photo-dialog">
+	<div class="dialog-title">
+		<button class="btn-close" (click)="dialogRef.close()"></button>
+	</div>
+
+	<section @if="!loading">
+		<img @if="photo.type === 'PHOTO'" [src]="'/assets/img/gallery/' + photo.path" [style]="{ 'width': width, 'height': height }" />
+		<video @if="photo.type === 'VIDEO'" controls autoplay>
+			<source [src]="'/assets/img/gallery/' + photo.path" type="video/mp4">
+		</video>
+	</section>
+	<div @if="loading" class="view-photo-loading">
+		Carregando...
+	</div>
+</div>

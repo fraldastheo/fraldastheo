@@ -1,0 +1,26 @@
+.view-photo-dialog {
+	
+	.dialog-title {
+		.btn-close {
+			background: #FFF;
+			opacity: 1;
+			position: relative;
+			margin: -20px -10px;
+			top: 5px;
+			z-index: 9;
+		}
+	}
+
+	> section {
+		> img,
+		> video {
+			display: block;
+			border-radius: 10px;
+		}
+	}
+
+	.view-photo-loading {
+		text-align: center;
+		padding: 20px;
+	}
+}
