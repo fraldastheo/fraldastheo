@@ -34,6 +34,11 @@ export class ViewPhotoDialog extends Dialog {
 		dialogArea.style.background = 'transparent';
 		dialogArea.style.boxShadow = 'unset';
 
+		const dialogContainer = this.dialogRef.element.querySelector('.nimble-dialog-container') as HTMLElement;
+		dialogContainer.style.minHeight = 'unset';
+		dialogContainer.style.height = 'unset';
+		dialogContainer.style.padding = '25px';
+
 		this.render(() => {
 			if (this.photo.type === 'PHOTO') {
 				this.listener.listen(window, 'click', this.onWindowResize.bind(this));

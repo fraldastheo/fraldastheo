@@ -17,6 +17,9 @@
 			display: block;
 			border-radius: 10px;
 		}
+		> video {
+			width: calc(100vw - 50px);
+		}
 	}
 
 	.view-photo-loading {

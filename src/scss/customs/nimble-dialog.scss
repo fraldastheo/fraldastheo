@@ -31,7 +31,8 @@
 .nimble-dialog-area {
     background-color: $dialogBackgroundColor;
 	width: 100%;
-	max-width: 500px;
+	max-width: 750px;
+	padding: 25px;
 }
 
 @include on-mobile() {

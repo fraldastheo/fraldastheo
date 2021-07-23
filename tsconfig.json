@@ -22,7 +22,8 @@
             "dom"
         ],
         "paths": {
-            "src/*": ["./src/*"]
+            "src/*": ["./src/*"],
+            "@nimble-ts/core": ["../nimble/src/src/*"]
         }
     },
     "include": [

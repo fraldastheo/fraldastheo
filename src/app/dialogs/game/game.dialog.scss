@@ -1,2 +1,17 @@
 .game-dialog {
+	display: table;
+	margin: auto;
+	border-radius: 20px;
+
+	.dialog-title {
+		.btn-close {
+			background-color: #FFF;
+		}
+	}
+
+    > canvas {
+        display: block;
+        transition-duration: .5s;
+		border-radius: 20px;
+    }
 }
