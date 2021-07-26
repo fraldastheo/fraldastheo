@@ -39,4 +39,31 @@
             background-color: $cyan;
         }
     }
+
+	.count-down {
+		text-align: center;
+		font-size: 30px;
+		margin-top: 25px;
+		padding-bottom: 50px;
+
+		p {
+			margin: 0;
+		}
+
+		.days {
+			font-size: 60px;
+			font-weight: bold;
+			line-height: 1;
+			
+		}
+		.days-text {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1;
+			margin-left: -20px;
+		}
+		.text {
+			font-size: 18px;
+		}
+	}
 }

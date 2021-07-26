@@ -1,4 +1,18 @@
 <div  class="home-page">
+	<div class="count-down mb-4">
+        <p class="title">Faltam</p>
+        <p @if="countDown.days"  class="days">
+			{{ padLeft(countDown.days) }}
+			<span class="days-text">dias</span>
+		</p>
+        <p class="hours">
+			<strong>{{ padLeft(countDown.hours) }}</strong>:<strong>{{ padLeft(countDown.minutes) }}</strong>:<strong>{{ padLeft(countDown.seconds) }}</strong>
+		</p>
+        <p class="text">
+			para o parto (previsto)
+		</p>
+    </div>
+
 	<div class="comment-box mb-4">
         Oi pessoal, estou quase chegando e estou aqui muito ansioso para conhecer vocês!
 		Papai e mamãe me contaram que por causa da pandemia ainda não podemos aglomerar, mas não podemos deixar de comemorar, não é mesmo?
@@ -28,7 +42,7 @@
             <button class="home-button yellow mb-4" (click)="openGame()">
                 <div class="row justify-content-center">
                     <div class="col-auto d-flex">
-                        <img src="/assets/img/pac.svg" alt="" [style]="{ 'width': '70px' }"/>
+                        <img src="/assets/img/pac.svg" alt="" [style]="{ 'height': '79px' }"/>
                     </div>
                     <div class="col-auto">
                         Jogar game<br/>

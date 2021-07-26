@@ -9,6 +9,9 @@ export class DonateDialog extends Dialog {
 
 	public qrCodeCopied: boolean = false;
 	public qrCodeCopiedTimeout;
+	public currentTab = 'PIX';
+	public addressCoord = { lat: -18.9119722, lng: -48.2529268 };
+	private map: google.maps.Map;
 
     constructor(
         @Inject(DIALOG_REF) public dialogRef: DialogRef<DonateDialog>
@@ -18,6 +21,26 @@ export class DonateDialog extends Dialog {
 
     public onOpen(): void {
     }
+
+	public selectTab(tab: string): void {
+		if (this.currentTab !== tab) {
+			this.render(() => {
+				this.currentTab = tab;
+			}).then(() => {
+				if (tab === 'DELIVERY') {
+					this.map = new google.maps.Map(document.getElementById('map'), {
+						center: this.addressCoord,
+						zoom: 16,
+					});
+					new google.maps.Marker({
+						position: this.addressCoord,
+						map: this.map,
+						title: "Hello World!",
+					});
+				}
+			});
+		}
+	}
 
     public copyQrCode(): void {
 		const el = document.createElement('textarea');

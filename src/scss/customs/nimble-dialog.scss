@@ -26,6 +26,14 @@
 			}
 		}
 	}
+	
+	.dialog-footer {
+		width: calc(100% + 50px);
+		margin: 0 -25px -25px -25px;
+		padding: 25px;
+		background-color: rgba(#000, 0.025);
+		border-top: 1px solid rgba(#000, 0.05);
+	}
 }
 
 .nimble-dialog-area {
