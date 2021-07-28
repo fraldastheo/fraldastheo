@@ -18,11 +18,13 @@
 		}
 	}
 
+    .root-content {
+		margin: 0 auto;
+		max-width: 900px;
+	}
     .root-content,
 	.footer-root-page {
         display: block;
-		margin: 0 auto;
-		max-width: 900px;
 		padding: 60px 20px;
 	}
 	
@@ -39,10 +41,15 @@
 		font-size: 12px;
 		background: rgba(#FFF, .05);
 
-		> i {
-			font-style: normal;
-			font-size: 15px;
-			vertical-align: middle;
+		> section {
+			margin: 0 auto;
+			max-width: 900px;
+
+			> i {
+				font-style: normal;
+				font-size: 15px;
+				vertical-align: middle;
+			}
 		}
 	}
 

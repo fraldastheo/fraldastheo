@@ -12,6 +12,13 @@ export class PhotosDialog extends Dialog {
 
 	public galleries = [
 		new Gallery({
+			title: 'Meu coraçãozinho',
+			subtitle: 'Essa foi a primeira vez que o papai e mamãe escutaram meu coraçãozinho!',
+			medias: [
+				{ path: 'meu-coracao/01.mp4', type: 'VIDEO' },
+			]
+		}),
+		new Gallery({
 			title: 'Meus ultrassons',
 			subtitle: '',
 			medias: [
@@ -26,18 +33,25 @@ export class PhotosDialog extends Dialog {
 			]
 		}),
 		new Gallery({
+			title: 'Na barriga da mamãe (altas poses)',
+			subtitle: '',
+			medias: [
+				{ path: 'barriga/01.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/02.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/03.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/04.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/05.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/06.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/07.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/08.jpeg', type: 'PHOTO' },
+			]
+		}),
+		new Gallery({
 			title: 'Meu quartinho',
 			subtitle: '',
 			medias: [
 				{ path: 'meu-quartinho/01.jpeg', type: 'PHOTO' },
 				{ path: 'meu-quartinho/02.jpeg', type: 'PHOTO' },
-			]
-		}),
-		new Gallery({
-			title: 'Meu coraçãozinho',
-			subtitle: 'Essa foi a primeira vez que o papai e mamãe escutaram meu coraçãozinho!',
-			medias: [
-				{ path: 'meu-coracao/01.mp4', type: 'VIDEO' },
 			]
 		}),
 	]
@@ -47,7 +61,6 @@ export class PhotosDialog extends Dialog {
         private dialogBuilder: DialogBuilder,
     ) {
         super();
-		dialogRef.escClose = false;
     }
 
     public onOpen() {
