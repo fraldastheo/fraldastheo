@@ -87,8 +87,8 @@ export class User {
                 <h4>Você perdeu!</h4>
 
                 <p>
-                    Você não conseguiu pegar todas as coins<br/>
-                    antes que os fantasmas lhe pegassem.
+                    Você não conseguiu pegar todas as bolinhas e mamadeiras<br/>
+                    antes que os fantasmas o pegassem.
                 </p>
 
                 <button class="yellow">
@@ -132,7 +132,7 @@ export class User {
         `
             <section class="animated zoomIn">
                 <p>
-                    Fuja dos fantasmas e pegue todas as <i>coins</i><br/>
+                    Fuja dos fantasmas e pegue todas as <i>bolinhas e mamadeiras</i><br/>
                     que encontrar pelo caminho.
                 </p>
 
@@ -179,7 +179,7 @@ export class User {
                 <h1>Você ganhou!!</h1>
 
                 <p>
-                    Parabéns! Você pegou todas as coins antes mesmo
+                    Parabéns! Você pegou todas as bolinhas e mamadeiras antes mesmo
                     que os fantasmas o pegassem.
                 </p>
 

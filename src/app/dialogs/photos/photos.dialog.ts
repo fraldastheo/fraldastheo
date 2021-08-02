@@ -44,6 +44,10 @@ export class PhotosDialog extends Dialog {
 				{ path: 'barriga/06.jpeg', type: 'PHOTO' },
 				{ path: 'barriga/07.jpeg', type: 'PHOTO' },
 				{ path: 'barriga/08.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/09.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/10.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/11.jpeg', type: 'PHOTO' },
+				{ path: 'barriga/12.jpeg', type: 'PHOTO' },
 			]
 		}),
 		new Gallery({

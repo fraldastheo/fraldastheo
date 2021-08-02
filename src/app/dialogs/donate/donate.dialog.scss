@@ -2,6 +2,18 @@
 @import 'src/scss/mixins';
 
 .donate-dialog {
+		
+	h3 {
+		> p {
+			font-size: 12px;
+			font-weight: 400;
+			margin: 0 auto 5px auto;
+		}
+	}
+
+	p {
+		line-height: 1.1;
+	}
 
 	.dialog-title {
 		margin-bottom: 10px;
@@ -22,10 +34,6 @@
 	.tab-group {
 		width: calc(100% + 50px);
 		margin: 0 -25px;
-	}
-
-	p {
-		line-height: 1.1;
 	}
 
 	.qr-code {

@@ -6,7 +6,7 @@
 
 	<div class="tab-group">
 		<div class="tab-item" [class]="{ 'active': currentTab === 'PIX' }" (click)="selectTab('PIX')">
-			Doar via Pix
+			Enviar via Pix
 		</div>
 		<div class="tab-item" [class]="{ 'active': currentTab === 'DELIVERY' }" (click)="selectTab('DELIVERY')">
 			Enviar por correios
@@ -16,6 +16,9 @@
 	<div @if="currentTab === 'PIX'" class="dialog-content text-center">
 		<h3>
 			<span class="f-w-400">Qr Code</span> <span class="f-w-600">Pix</span>!
+			<p [style]="{ 'max-width': '250px' }">
+				(Envie o valor das fraldas que você levaria no chá de fraldas)
+			</p>
 		</h3>
 		<a class="d-table m-auto" href="https://nubank.com.br/pagar/5x2zu/bt8HgMXleO" target="_blank">
 			<img class="qr-code" src="/assets/img/qr-code-0.png"/>
@@ -45,7 +48,9 @@
 					</span>
 				</div>
 				<div class="col text">
-					Nós agradecemos de todo o coração o seu apoio na doação de fraldas para o Théo. Pois, mesmo não sendo possível realizar um chá de fraldas tradicional, é um momento extremamente importante para todos nós.
+					Nós agradecemos de todo o coração a sua contribuição com as fraldas para o Théo. 
+					Pois, mesmo não sendo possível realizar um chá de fraldas tradicional, 
+					é um momento extremamente importante para todos nós.
 				</div>
 			</div>
 			<div class="sign">
