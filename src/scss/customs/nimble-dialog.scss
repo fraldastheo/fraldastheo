@@ -44,16 +44,18 @@
 }
 
 @include on-mobile() {
+	.nimble-dialog-panel {
+		align-items: unset;
+	}
+	
 	.nimble-dialog-container {
 		min-height: 100%;
-		height: 100%;
 		padding: 0;
 	}
 	
 	.nimble-dialog-area {
 		display: block;
 		border-radius: 0;
-		height: auto;
 		min-height: 100%;
 		max-width: unset;
 	}
