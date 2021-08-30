@@ -12,8 +12,7 @@ import { GameDialog } from 'src/app/dialogs/game/game.dialog';
 export class HomePage extends Page {
 
 	private countDownInterval: any;
-	public bornDate = new Date('2021-09-12T03:00:00Z');
-	// public bornDate = new Date('2021-07-26T21:50:00Z');
+	public bornDate = new Date('2021-09-08T14:00:00Z');
 	public get dateNow() { return new Date(); }
 	public get countDown() {
 		const diff = (this.bornDate.getTime() - this.dateNow.getTime());
@@ -21,18 +20,25 @@ export class HomePage extends Page {
 		let data = {} as any;
 		data.days =  Math.floor(days);
 		data.hours = Math.floor((days - data.days) * 24);
-		data.minutes = Math.floor(((days - data.days) * 24 - data.hours) * 60);
-		data.seconds = Math.floor((((days - data.days) * 24 - data.hours) * 60 - data.minutes) * 60);
+		data.min = Math.floor(((days - data.days) * 24 - data.hours) * 60);
+		data.sec = Math.floor((((days - data.days) * 24 - data.hours) * 60 - data.min) * 60);
+
 		return data;
+	}
+	public get wasBorn() {
+		const remaining = this.countDown;
+		return remaining.days < 0;
 	}
 
     constructor(
         private dialogBuilder: DialogBuilder
     ) {
         super();
-		this.countDownInterval = setInterval(() => {
-			this.render();
-		}, 1000);
+		if (!this.wasBorn) {
+			this.countDownInterval = setInterval(() => {
+				this.render();
+			}, 1000);
+		}
 	}
 
     public openPhotos(): void {

@@ -1,16 +1,21 @@
 <div  class="home-page">
-	<div class="count-down mb-4">
+	<div @if="!wasBorn" class="count-down mb-4">
         <p class="title">Faltam</p>
-        <p @if="countDown.days"  class="days">
-			{{ padLeft(countDown.days) }}
+        <p class="days">
+			{{ padLeft(Math.max(0, countDown.days)) }}
 			<span class="days-text">dias</span>
 		</p>
         <p class="hours">
-			<strong>{{ padLeft(countDown.hours) }}</strong>:<strong>{{ padLeft(countDown.minutes) }}</strong>:<strong>{{ padLeft(countDown.seconds) }}</strong>
+			<strong>{{ padLeft(countDown.hours) }}</strong>:<strong>{{ padLeft(countDown.min) }}</strong>:<strong>{{ padLeft(countDown.sec) }}</strong>
 		</p>
         <p class="text">
 			para o parto (previsto)
 		</p>
+    </div>
+	<div @if="wasBorn" class="count-down mb-4">
+        <p>Olá pessoal!</p>
+        <p>Nasci no dia <strong>{{ bornDate.toLocaleString().split(' ')[0] }}</strong></p>
+        <p>às <strong>{{ bornDate.toLocaleString().split(' ')[1] }}</strong></p>
     </div>
 
 	<div class="comment-box mb-4">
