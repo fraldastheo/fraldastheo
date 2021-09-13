@@ -12,7 +12,7 @@ import { GameDialog } from 'src/app/dialogs/game/game.dialog';
 export class HomePage extends Page {
 
 	private countDownInterval: any;
-	public bornDate = new Date('2021-09-08T14:00:00Z');
+	public bornDate = new Date('2021-09-07T07:56:00Z');
 	public get dateNow() { return new Date(); }
 	public get countDown() {
 		const diff = (this.bornDate.getTime() - this.dateNow.getTime());
